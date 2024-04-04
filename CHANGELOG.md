@@ -15,8 +15,19 @@ and this project adheres to the Python [PEP 440 versioning recommendations](http
 
 
 
+## [3.0.0rc6] - 2024.04.04
+Bump to 3.0.0rc6
+
+Release tag: [v3.0.0rc6](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.0rc6)
+
+Release candidate for version 3.0.0
+
+### Change
+* [Add Occurrence attribute id, nam and type #133](https://github.com/OCXStandard/OCX_Schema/issues/133)
+
+
 ## [3.0.0rc5] - 2024.03.22
-Bump to 3.0.0rc35
+Bump to 3.0.0rc5
 
 Release tag: [v3.0.0rc5](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.0rc5)
 
