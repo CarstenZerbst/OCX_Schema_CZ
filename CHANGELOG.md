@@ -15,7 +15,7 @@ and this project adheres to the Python [PEP 440 versioning recommendations](http
 
 
 ## [3.0.0rc7] - 2024.04.09
-Bump to 3.0.0rc6
+Bump to 3.0.0rc7
 
 Release tag: [v3.0.0rc7](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.0rc7)
 
