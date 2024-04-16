@@ -14,6 +14,18 @@ and this project adheres to the Python [PEP 440 versioning recommendations](http
 * ``Security`` in case of vulnerabilities.
 
 
+## [3.0.0rc8] - 2024.04.16
+Bump to 3.0.0rc8
+
+Release tag: [v3.0.0rc8](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.0rc8)
+
+Release candidate for version 3.0.0
+
+### Change
+* [Add missing EdgeReinforcementRef to LimitedBy #139](https://github.com/OCXStandard/OCX_Schema/issues/139)
+
+
+
 ## [3.0.0rc7] - 2024.04.09
 Bump to 3.0.0rc7
 
