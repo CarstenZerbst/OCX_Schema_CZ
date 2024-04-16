@@ -12,15 +12,14 @@ name = "OCX"
 version = "3.0.0rc7"
 description = ""
 authors = ["ocastrup <ole.christain.astrup@dnv.com>"]
-readme = "DATABINDING.md"
+readme = "README.md"
 packages = [{include = "ocx"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-xsdata = "*"
+python = "^3.9"
 packaging = "^23.1"
 tbump = "*"
-ocx_databinding = "^2.6"
+ocx_databinding = "^2.7"
 
 [tool.tbump]
 # Uncomment this if your project is hosted on GitHub:
