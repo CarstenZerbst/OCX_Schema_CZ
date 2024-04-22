@@ -14,6 +14,13 @@ and this project adheres to the Python [PEP 440 versioning recommendations](http
 * ``Security`` in case of vulnerabilities.
 
 
+## [3.0.0] - 2024.04.22
+Bump to 3.0.0
+
+Release tag: [v3.0.0](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.0)
+
+Schema release version
+
 ## [3.0.0rc8] - 2024.04.16
 Bump to 3.0.0rc8
 
