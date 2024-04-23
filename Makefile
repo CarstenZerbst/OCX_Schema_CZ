@@ -66,13 +66,8 @@ doc: ## Build the html docs using Sphinx. For other Sphinx options, run make in 
 	@$(SPHINXBUILD)  "$(SOURCEDIR)" "$(BUILDDIR)/$(SPHINXOPTS)" -b "$(SPHINXOPTS)"
 
 
-
-# RUN ##################################################################
-
-# GENERATE DATABINDINGS ########################################################
-
-generate: ## Generate the python data-bindings. See the .xsdata.xml file for xsdata settings
-	@xsdata generate OCX_ext_rudder.xsd
+publish: ## Publishe the dist to pypi
+	@poetry publish  --username=__token__ --password=pypi-<copy token here>
 
 # HELP ########################################################################
 

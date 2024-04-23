@@ -9,7 +9,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "OCX"
-version = "3.0.0"
+version = "3.0.1"
 description = ""
 authors = ["ocastrup <ole.christain.astrup@dnv.com>"]
 readme = "README.md"
@@ -19,7 +19,8 @@ packages = [{include = "ocx"}]
 python = "^3.9"
 packaging = "^23.1"
 tbump = "*"
-ocx_databinding = "^2.7"
+ocx_databinding = "*"
+twine = "*"
 
 [tool.tbump]
 # Uncomment this if your project is hosted on GitHub:

@@ -9,7 +9,7 @@ class LangValue(Enum):
     VALUE = ""
 
 
-@dataclass(slots=True)
+@dataclass
 class BuilderInformationT:
     """
     Attributes
@@ -50,7 +50,7 @@ class BuilderInformationT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassNotationT:
     """
     Type definition of ClassNotation.
@@ -120,7 +120,7 @@ class ClassNotationT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassParametersT:
     """
     Information that specifies design and intended performance characteristics of
@@ -201,7 +201,7 @@ class ClassParametersT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CustomPropertyT:
     """
     Type definition.
@@ -254,7 +254,7 @@ class CustomPropertyT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Description:
     """Contains a description of the component its parent represents.
 
@@ -273,14 +273,14 @@ class Description:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DescriptionT:
     class Meta:
         name = "Description_T"
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HeaderT:
     """
     Type definition for the Header information for an XML instance.
@@ -348,7 +348,7 @@ class HeaderT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class KnotVectorT:
     """
     Type definition of the NURBS knot vector.
@@ -371,7 +371,7 @@ class KnotVectorT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Point3DT:
     """
     Type definition of a compact definition of  a point in 3D space composed of  a
@@ -398,7 +398,7 @@ class Point3DT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class QuantityT:
     """Type definition of the abstract base class for all types with values carrying a Unit : Q = v * u.
 
@@ -426,7 +426,7 @@ class QuantityT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ReferenceBaseT:
     """
     Type definition.
@@ -470,7 +470,7 @@ class ReferenceBaseT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ReferencePlaneT:
     """
     Type definition of the concept of a reference plane which is typically used to
@@ -481,7 +481,7 @@ class ReferencePlaneT:
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ShipDesignationT:
     """The different types of identification given to the ship in order that it can
     be categorised by any shipping related organisation.
@@ -540,7 +540,7 @@ class ShipDesignationT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class StatutoryDataT:
     """
     Type definition of vessel data related to the flag state.
@@ -572,7 +572,7 @@ class StatutoryDataT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Vector3DT:
     """
     Type definition of a unit vector.
@@ -641,7 +641,7 @@ class ClassificationSociety(Enum):
         HR: Hellenic Register of Shipping.
         IRS: Indian Register of Shipping.
         KR: Korean Register of Shipping.
-        LR: Lloyds Register.
+        LR: Lloyd’s Register.
         NK: Nippon Kaiji Kyokai.
         PRS: Polish Register of Shipping.
         RCB: Registro Cubano de Buques.
@@ -747,12 +747,12 @@ class CurveFormEnum(Enum):
 class FreeboardTypeValue(Enum):
     """
     Attributes
-        A: A type "A" ship is one which is designed to carry only liquid
+        A: A type A ship is one which is designed to carry only liquid
             cargoes in bulk, and in which cargo tanks have only small
             access openings closed by watertight gasketed covers of
             steel or equivalent material.
         B: All ships which do not come within the provisions regarding
-            Type "A" ships shall be considered as Type "B" ships.
+            Type A ships shall be considered as Type B ships.
             .
     """
     A = "A"
@@ -786,10 +786,10 @@ class FunctionTypeValue(Enum):
             permanent means of closing all exposed openings.
         DECK_FORECASTLE_DECK: Forecastle deck is a deck attached to the
             short superstructure situated at the bow.
-        DECK_FREEBOARD_DECK: Freeboard deck is the first deck above the
+        DECK_FREEBOARD_DECK: Free board deck is the first deck above the
             waterline.
         DECK_GIRDER: Deck Structure is the deck plating with primary
-            girder memebers.
+            girder members.
         DECK_INNER_BOTTOM_DECK: Deck Structure is the deck plating with
             stiffeners, girders and supporting pillars.
         DECK_PLATFORM_DECK: Deck Structure is the deck plating with
@@ -800,7 +800,7 @@ class FunctionTypeValue(Enum):
             continuous deck. After special consideration of its
             effectiveness, another deck may be defined as strength deck.
         DECK_SUPERSTRUCTURE_DECK: Superstructure is a decked structure
-            on the freeboard deck extending for at least 92% of the
+            on the free-board deck extending for at least 92% of the
             breadth of the ship.
         DECK_TRUNK_DECK: Deck Structure is the deck plating with
             stiffeners, girders and supporting pillars.
@@ -813,14 +813,14 @@ class FunctionTypeValue(Enum):
         FOUNDATION: Supporting foundation structure .
         FOUNDATION_ENGINE: Engine foundation including foundation top
             plate .
-        HATCHWAY_COAMING: Hatch Coaming is the vertical plating built
+        HATCHWAY_COAMING: Hatch Coming is the vertical plating built
             around the hatchways to prevent water from entering the
             hold; and to serve as a framework for the hatch covers.
-        HATCHWAY_COAMING_END_COAMING: Hatch Coaming is the vertical
+        HATCHWAY_COAMING_END_COAMING: Hatch Coming is the vertical
             plating built around the hatchways to prevent water from
             entering the hold; and to serve as a framework for the hatch
             covers.
-        HATCHWAY_COAMING_SIDE_COAMING: Hatch Coaming is the vertical
+        HATCHWAY_COAMING_SIDE_COAMING: Hatch Coming is the vertical
             plating built around the hatchways to prevent water from
             entering the hold; and to serve as a framework for the hatch
             covers.
@@ -884,14 +884,14 @@ class FunctionTypeValue(Enum):
             cargo holds to prevent undesired pockets of cargo. The term
             is also commonly applied to slanted plates that are fitted
             to improve the structural stability of corrugated bulkheads
-            and framing members.&gt;.
-        SHEER_STRAKE: Sheer Strake is the top strake of a ship's side
-            shell plating&gt;.
+            and framing members..
+        SHEER_STRAKE: Sheer strake is the top strake of a ships side
+            shell plating.
         SHELL: The watertight shell plating of the hull.
         SHELL_BILGE_KEEL: Bilge Keel is a piece of plate set
             perpendicular to a ship’s shell along her bilges for about
-            one third her length to reduce rolling.&gt;.
-        SHELL_BILGE_STRAKE: Bilge Strake is the strake at the turn of
+            one third her length to reduce rolling..
+        SHELL_BILGE_STRAKE: Bilge strake is the strake at the turn of
             bilge extending outward to a point where the side rises
             vertically.
         SHELL_BOTTOM_SHELL: The watertight shell plating of the bottom
@@ -906,8 +906,8 @@ class FunctionTypeValue(Enum):
         SHELL_SUPERSTRUCTURE_SIDE: The watertight shell plating at the
             superstructure side.
         SUPERSTRUCTURE: Superstructure is a decked structure on the
-            freeboard deck extending for at least 92% of the breadth of
-            the ship. Often named deckhouse or wheelhouse.
+            free-board deck extending for at least 92% of the breadth of
+            the ship. Often named deck-house or wheelhouse.
         SUPERSTRUCTURE_DECKHOUSE_AFT: Superstructure/Wheelhouse aft.
         SUPERSTRUCTURE_DECKHOUSE_FRONT: Superstructure/Wheelhouse front.
         SUPERSTRUCTURE_DECKHOUSE_SIDE: Superstructure/Wheelhouse side.
@@ -1281,7 +1281,7 @@ class UnitCargoTypeValue(Enum):
     UNSPECIFIED = "unspecified"
 
 
-@dataclass(slots=True)
+@dataclass
 class AmountOfSubstanceType:
     """
     Type of the quantity amount of substance.
@@ -1309,7 +1309,7 @@ class AmountOfSubstanceType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ElectricCurrentType:
     """
     Type of the quantity electric current.
@@ -1342,34 +1342,35 @@ class EnumeratedRootUnitTypePrefix(Enum):
     Attributes
         Y: yotta: septillion
         Z: zetta: sextillion
-        P: exa: quintillion
-        T: peta: quadrillion
-        G: tera: trillion
-        M: giga: billion
-        K: mega: million
-        H: kilo: thousand
-        DA: hecto: hundred
-        D: deca: ten
-        C: deci: tenth
-        M_1: centi: hundredth
-        U: milli: thousandth
-        N: micro: millonth
-        P_1: nano: billonth
-        F: pico: trillionth
-        A: femto: quadrillionth
-        Z_1: atto: quintillionth
-        Y_1: zepto: sextillionth:
-        KI: yocto: septillionth
-        MI: kibi: kilobinary
-        GI: mebi: magabinary
-        TI: gibi: gigabinary
-        PI: tebi: terabinary
-        EI: exbi: exabinary
+        E: exa: quintillion
+        P: peta: quadrillion
+        T: tera: trillion
+        G: giga: billion
+        M: mega: million
+        K: kilo: thousand
+        H: hecto: hundred
+        DA: deka: ten
+        D: deci: tenth
+        C: centi: hundredth
+        M_1: milli: thousandth
+        MU: micro: millonth
+        N: nano: billonth
+        P_1: pico: trillionth
+        F: femto: quadrillionth
+        A: atto: quintillionth
+        Z_1: zepto: sextillionth:
+        Y_1: yocto: septillionth
+        KI: kibi: kilobinary
+        MI: mebi: magabinary
+        GI: gibi: gigabinary
+        TI: tebi: terabinary
         ZI: pebi: petabinary
+        EI: exbi: exabinary
         YI: yobi: yottabinary
     """
     Y = "Y"
     Z = "Z"
+    E = "E"
     P = "P"
     T = "T"
     G = "G"
@@ -1380,7 +1381,7 @@ class EnumeratedRootUnitTypePrefix(Enum):
     D = "d"
     C = "c"
     M_1 = "m"
-    U = "u"
+    MU = "mu"
     N = "n"
     P_1 = "p"
     F = "f"
@@ -1391,9 +1392,8 @@ class EnumeratedRootUnitTypePrefix(Enum):
     MI = "Mi"
     GI = "Gi"
     TI = "Ti"
-    PI = "Pi"
-    EI = "Ei"
     ZI = "Zi"
+    EI = "Ei"
     YI = "Yi"
 
 
@@ -1643,7 +1643,7 @@ class EnumeratedRootUnitTypeUnit(Enum):
     CARAT = "carat"
 
 
-@dataclass(slots=True)
+@dataclass
 class LengthType:
     """
     Type of the quantity length.
@@ -1671,7 +1671,7 @@ class LengthType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LuminousIntensityType:
     """
     Type of the quantity luminous intensity.
@@ -1699,7 +1699,7 @@ class LuminousIntensityType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class MassType:
     """
     Type of the quantity mass.
@@ -1727,7 +1727,7 @@ class MassType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SymbolType:
     """Type for symbols.
 
@@ -1759,7 +1759,7 @@ class SymbolType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ThermodynamicTemperatureType:
     """
     Type of the quantity thermodynamic temperature.
@@ -1787,7 +1787,7 @@ class ThermodynamicTemperatureType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TimeType:
     """
     Type of the quantity time.
@@ -1815,7 +1815,7 @@ class TimeType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ApPos(QuantityT):
     """
     X Position of AP.
@@ -1825,7 +1825,7 @@ class ApPos(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class AirPipeHeight(QuantityT):
     """
     The AirpipeHeight specifies height from the baseline to the top of the air
@@ -1835,7 +1835,7 @@ class AirPipeHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class AngleOfRepose(QuantityT):
     """
     The natural angle of repose specifies the angle naturally subtended with the
@@ -1846,7 +1846,7 @@ class AngleOfRepose(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class AngleTolerance(QuantityT):
     """
     Absolute angular tolerance measure used by the exporting application when
@@ -1856,7 +1856,7 @@ class AngleTolerance(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ApplicationRefT(ReferenceBaseT):
     class Meta:
         name = "ApplicationRef_T"
@@ -1873,7 +1873,7 @@ class ApplicationRefT(ReferenceBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Area(QuantityT):
     """
     The bar section area.
@@ -1882,7 +1882,7 @@ class Area(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ArmLengthU(QuantityT):
     """
     The length of the bracket in local U-direction.
@@ -1891,7 +1891,7 @@ class ArmLengthU(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ArmLengthV(QuantityT):
     """
     The length of the bracket in local V-direction.
@@ -1900,7 +1900,7 @@ class ArmLengthV(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Axis(Vector3DT):
     """
     Cylinder revolution axis direction.
@@ -1909,7 +1909,7 @@ class Axis(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BaseRadius(QuantityT):
     """
     Cone base radius.
@@ -1918,7 +1918,7 @@ class BaseRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BlockCoefficient(QuantityT):
     """
     The ratio of the moulded displacement volume to the volume of a block that has
@@ -1930,7 +1930,7 @@ class BlockCoefficient(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BuilderInformation(BuilderInformationT):
     """The organization that designs, builds, maintains, and repairs ships.
 
@@ -1941,7 +1941,7 @@ class BuilderInformation(BuilderInformationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbAngle(QuantityT):
     """
     Profile width and web thickness.
@@ -1950,7 +1950,7 @@ class BulbAngle(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbBottomRadius(QuantityT):
     """
     The radius at the bottom of the web.
@@ -1959,7 +1959,7 @@ class BulbBottomRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbInnerRadius(QuantityT):
     """
     The inner radius of the bulb.
@@ -1968,7 +1968,7 @@ class BulbInnerRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbOuterRadius(QuantityT):
     """
     The outer radius of the bulb.
@@ -1977,7 +1977,7 @@ class BulbOuterRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbTopRadius(QuantityT):
     """
     The radius at the top of the bulb.
@@ -1986,7 +1986,7 @@ class BulbTopRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CarriagePressure(QuantityT):
     """
     The CarriagePressure specifies the required pressure of the compartment in
@@ -1996,7 +1996,7 @@ class CarriagePressure(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CatalogueRefT(ReferenceBaseT):
     """
     Type definition.
@@ -2006,7 +2006,7 @@ class CatalogueRefT(ReferenceBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CellRefT(ReferenceBaseT):
     """
     Type definition.
@@ -2031,18 +2031,18 @@ class CellRefT(ReferenceBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Center(Point3DT):
     """
-    The center position of a shape.
+    The centre position of a shape.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CenterOfGravity(Point3DT):
-    """The center of gravity (COG) of the parent object.
+    """The centre of gravity (COG) of the parent object.
 
     The receiving application can use the value received from the
     authoring application to check that the object has been transferred
@@ -2052,7 +2052,7 @@ class CenterOfGravity(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassNotation(ClassNotationT):
     """
     The notations given to the hull and machinery of the Ship by the classification
@@ -2063,7 +2063,7 @@ class ClassNotation(ClassNotationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectionConfigurationRefT(ReferenceBaseT):
     """
     Type definition.
@@ -2073,7 +2073,7 @@ class ConnectionConfigurationRefT(ReferenceBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectionLength(QuantityT):
     """
     The connection length of the direct connection between a stiffener and a
@@ -2083,7 +2083,7 @@ class ConnectionLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ContourEnd(Point3DT):
     """
     The end point  of the LimitedBy  contour curve.
@@ -2092,7 +2092,7 @@ class ContourEnd(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ContourStart(Point3DT):
     """
     The start point  of the LimitedBy  contour curve.
@@ -2101,7 +2101,7 @@ class ContourStart(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ControlPointT(Point3DT):
     """
     Attributes
@@ -2120,7 +2120,7 @@ class ControlPointT(Point3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CopeHeight(QuantityT):
     """
     The height of the cope.
@@ -2129,7 +2129,7 @@ class CopeHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CopeLength(QuantityT):
     """The length of the cope.
 
@@ -2139,7 +2139,7 @@ class CopeLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CopeRadius(QuantityT):
     """
     The cope or heel radius.
@@ -2148,7 +2148,7 @@ class CopeRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CurveLength(QuantityT):
     """The curve length computed by the sending application.
 
@@ -2158,7 +2158,7 @@ class CurveLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CustomProperty(CustomPropertyT):
     """
     A generic custom property type with a key, value pair and optional unit.
@@ -2167,7 +2167,7 @@ class CustomProperty(CustomPropertyT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CutbackDistance(QuantityT):
     """
     Distance from stiffener logical end position to the start of the web cutback.
@@ -2176,7 +2176,7 @@ class CutbackDistance(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DeadWeight(QuantityT):
     """
     The weight of the passengers, crew, cargo, stores, ballast, fresh water, fuel
@@ -2187,7 +2187,7 @@ class DeadWeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DeepestEquilibriumWl(QuantityT):
     """
     Deepest equilibrium waterline in damaged condition.
@@ -2197,7 +2197,7 @@ class DeepestEquilibriumWl(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Density(QuantityT):
     """
     The material density.
@@ -2206,7 +2206,7 @@ class Density(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DesignSpeed(QuantityT):
     """
     The forward or service speed at which the ship is designed to operate (see ISO
@@ -2216,7 +2216,7 @@ class DesignSpeed(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Diameter(QuantityT):
     """
     Circle diameter.
@@ -2225,7 +2225,7 @@ class Diameter(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Displacement(QuantityT):
     """The Radius displacement outside the original corner of the rectangle.
 
@@ -2236,7 +2236,7 @@ class Displacement(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DistanceAbove(QuantityT):
     """
     The distance of the lug above the plate (bottom of the slot opening).
@@ -2245,7 +2245,7 @@ class DistanceAbove(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DistanceBelow(QuantityT):
     """
     The distance below the lug plate to bottom of the slot.
@@ -2254,7 +2254,7 @@ class DistanceBelow(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DistanceToAp(QuantityT):
     """The offset  of  frame zero (#0) from the After Perpendicular (AP).
 
@@ -2265,7 +2265,7 @@ class DistanceToAp(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DistanceTolerance(QuantityT):
     """
     Absolute tolerance measure used by the exporting application when defining
@@ -2275,7 +2275,7 @@ class DistanceTolerance(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DryWeight(QuantityT):
     """
     The total dry weight of the parent member.
@@ -2284,7 +2284,7 @@ class DryWeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EndCutRefT(ReferenceBaseT):
     """
     Type definition.
@@ -2309,7 +2309,7 @@ class EndCutRefT(ReferenceBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EndPoint(Point3DT):
     """
     The end position of the segment.
@@ -2318,7 +2318,7 @@ class EndPoint(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ExternalGeometryRefT:
     class Meta:
         name = "ExternalGeometryRef_T"
@@ -2345,7 +2345,7 @@ class ExternalGeometryRefT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class FpPos(QuantityT):
     """X-Position of fwd.
 
@@ -2356,7 +2356,7 @@ class FpPos(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FilletRadius(QuantityT):
     """
     Corner fillet radius.
@@ -2365,7 +2365,7 @@ class FilletRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FillingHeight(QuantityT):
     """
     The filling_height specifies the maximum height for filling of the tank
@@ -2375,7 +2375,7 @@ class FillingHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeCutBackAngle(QuantityT):
     """
     Cut angle of stiffener flange.
@@ -2384,7 +2384,7 @@ class FlangeCutBackAngle(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeDirection(Vector3DT):
     """Direction of the stiffener flange.
 
@@ -2394,7 +2394,7 @@ class FlangeDirection(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeNoseHeight(QuantityT):
     """
     Nose height of sniped stiffener flange.
@@ -2403,7 +2403,7 @@ class FlangeNoseHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeThickness(QuantityT):
     """
     The thickness of the flange.
@@ -2412,7 +2412,7 @@ class FlangeThickness(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeWidth(QuantityT):
     """
     Section profile flange width.
@@ -2421,7 +2421,7 @@ class FlangeWidth(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FreeEdgeRadius(QuantityT):
     """The edge radius at the bracket free edge.
 
@@ -2431,7 +2431,7 @@ class FreeEdgeRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FreeboardDeckHeight(QuantityT):
     """
     The height of free-board deck, D1.
@@ -2440,7 +2440,7 @@ class FreeboardDeckHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FreeboardLength(QuantityT):
     """
     The free-board length of the Vessel, Lll.
@@ -2449,7 +2449,7 @@ class FreeboardLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Header(HeaderT):
     """
     The header information of an XML export.
@@ -2458,7 +2458,7 @@ class Header(HeaderT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HeavyBallastDraught(QuantityT):
     """
     The Vessel draught at heavy ballast, Thb.
@@ -2467,7 +2467,7 @@ class HeavyBallastDraught(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Height(QuantityT):
     """
     The height of the parent element.
@@ -2476,7 +2476,7 @@ class Height(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class InertiaU(QuantityT):
     """
     Moment of inertia around NeutralAxisU.
@@ -2485,7 +2485,7 @@ class InertiaU(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class InertiaV(QuantityT):
     """
     Moment of inertia around NeutralAxisV.
@@ -2494,7 +2494,7 @@ class InertiaV(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class IntermediatePoint(Point3DT):
     """
     An intermediate point on the circular segment.
@@ -2503,7 +2503,7 @@ class IntermediatePoint(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class KnotVector(KnotVectorT):
     """The knot-vector is a list of  size m=+n-1 knots where p is the polynomial
     basis degree and n is the number of control points.
@@ -2516,7 +2516,7 @@ class KnotVector(KnotVectorT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LengthOfWaterline(QuantityT):
     """
     The length of the waterline at T, Lwl.
@@ -2525,16 +2525,16 @@ class LengthOfWaterline(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LowerRadius(QuantityT):
     """
-    The lower radious of an opening or slot.
+    The lower radius of an opening or slot.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Lpp(QuantityT):
     """
     The length of the Vessel between perpendiculars, Lpp.
@@ -2543,7 +2543,7 @@ class Lpp(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MajorAxis(Vector3DT):
     """
     Direction of ellipse major axis.
@@ -2552,7 +2552,7 @@ class MajorAxis(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MajorDiameter(QuantityT):
     """
     The ellipse major diameter.
@@ -2561,7 +2561,7 @@ class MajorDiameter(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MinorAxis(Vector3DT):
     """
     Definition of the ellipse minor axis direction.
@@ -2570,7 +2570,7 @@ class MinorAxis(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MinorDiameter(QuantityT):
     """
     The ellipse minor diameter.
@@ -2579,7 +2579,7 @@ class MinorDiameter(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MouldedBreadth(QuantityT):
     """
     The moulded breadth of the Vessel, B.
@@ -2588,7 +2588,7 @@ class MouldedBreadth(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MouldedDepth(QuantityT):
     """
     The moulded depth of the Vessel, D.
@@ -2597,7 +2597,7 @@ class MouldedDepth(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class NurbspropertiesT:
     """
     Type definition of a class defining the properties of the NURBS curve.
@@ -2662,7 +2662,7 @@ class NurbspropertiesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class NetArea(QuantityT):
     """The net plate area computed by the sending application.
 
@@ -2673,7 +2673,7 @@ class NetArea(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class NeutralAxisU(Vector3DT):
     """Position of the neutral axis parallel to the U axis measured from the foot
     point.
@@ -2684,7 +2684,7 @@ class NeutralAxisU(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class NeutralAxisV(Vector3DT):
     """Position of the neutral axis parallel to the V axis measured from the mould
     line side.
@@ -2695,7 +2695,7 @@ class NeutralAxisV(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Normal(Vector3DT):
     """
     A unit normal vector to a surface.
@@ -2704,7 +2704,7 @@ class Normal(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class NormalBallastDraught(QuantityT):
     """
     The Vessel draught at normal ballast, Tnb.
@@ -2713,7 +2713,7 @@ class NormalBallastDraught(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Offset(QuantityT):
     """An offset from a reference plane or surface.
 
@@ -2724,7 +2724,7 @@ class Offset(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OffsetU(QuantityT):
     """
     The offset from stiffener trace line of cross-section in local U direction.
@@ -2733,7 +2733,7 @@ class OffsetU(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OffsetV(QuantityT):
     """
     The offset from stiffener trace-line of cross-section in local V direction.
@@ -2742,7 +2742,7 @@ class OffsetV(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Origin(Point3DT):
     """
     The origin of a local or global coordinate system.
@@ -2751,7 +2751,7 @@ class Origin(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Overshoot(QuantityT):
     """The overshoot of the flange beyond the web.
 
@@ -2761,7 +2761,7 @@ class Overshoot(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Permeability(QuantityT):
     """
     The permeability specifies the amount by which the Cargo takes up water.
@@ -2770,7 +2770,7 @@ class Permeability(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Point3D(Point3DT):
     """
     Compact definition of  a point in 3D space composed of  a sequence of three
@@ -2781,16 +2781,16 @@ class Point3D(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PoissonRatio(QuantityT):
     """
-    The material Poisson ration.
+    The material Poisson's ration.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Position(Point3DT):
     """
     The position of the inclination of the cross-section.
@@ -2799,7 +2799,7 @@ class Position(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PrimaryAxis(Vector3DT):
     """
     The unit vector of the local X-axis (U-Axis) given in global Coordinate System.
@@ -2808,7 +2808,7 @@ class PrimaryAxis(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Radius(QuantityT):
     """
     The radius of the parent element.
@@ -2817,7 +2817,7 @@ class Radius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularTubeT:
     """
     Attributes
@@ -2858,7 +2858,7 @@ class RectangularTubeT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ReferenceLocation(QuantityT):
     """
     Location on the reference axis.
@@ -2867,7 +2867,7 @@ class ReferenceLocation(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ReliefValvePressure(QuantityT):
     """
     Pressure valve opening pressure when exceeding the general value.
@@ -2876,7 +2876,7 @@ class ReliefValvePressure(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RuleLength(QuantityT):
     """Rule (scantling) length, L.
 
@@ -2887,7 +2887,7 @@ class RuleLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ScantlingDraught(QuantityT):
     """Design draught moulded, fully loaded condition, Td.
 
@@ -2899,7 +2899,7 @@ class ScantlingDraught(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SecondaryAxis(Vector3DT):
     """
     The unit vector of the local Y-axis (V-Axis) given in global Coordinate System.
@@ -2908,7 +2908,7 @@ class SecondaryAxis(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ShipDesignation(ShipDesignationT):
     """The different types of identification given to the ship in order that it can
     be categorised by any shipping related organisation.
@@ -2920,7 +2920,7 @@ class ShipDesignation(ShipDesignationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SlammingDraughtEmptyFp(QuantityT):
     """
     The design slamming draught at FP (all ballast tanks empty), Tf-e.
@@ -2930,7 +2930,7 @@ class SlammingDraughtEmptyFp(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SlammingDraughtFullFp(QuantityT):
     """
     The Vessel draught at FP used when calculation design slamming loads (all
@@ -2941,7 +2941,7 @@ class SlammingDraughtFullFp(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SpeedFactor(QuantityT):
     """
     Speed factor Cav.
@@ -2950,7 +2950,7 @@ class SpeedFactor(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Start(QuantityT):
     """
     The location of Frame 0 in the frame table.
@@ -2959,7 +2959,7 @@ class Start(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StartPoint(Point3DT):
     """
     The start position of the segment.
@@ -2968,7 +2968,7 @@ class StartPoint(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StatutoryData(StatutoryDataT):
     """
     The vessel statutory information.
@@ -2977,7 +2977,7 @@ class StatutoryData(StatutoryDataT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StowageFactor(QuantityT):
     """The StowageFactor specifies the average specific volume for a dry cargo.
 
@@ -2988,7 +2988,7 @@ class StowageFactor(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StowageHeight(QuantityT):
     """Z coordinate of dry bulk stowage height.
 
@@ -2998,7 +2998,7 @@ class StowageHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StructureRefT(ReferenceBaseT):
     """
     Type definition.
@@ -3008,7 +3008,7 @@ class StructureRefT(ReferenceBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SweepLength(QuantityT):
     """
     The sweep length used to extrude a surface from a base curve.
@@ -3017,7 +3017,7 @@ class SweepLength(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ThermalExpansionCoefficient(QuantityT):
     """
     The material thermal expansion coefficient.
@@ -3026,7 +3026,7 @@ class ThermalExpansionCoefficient(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Thickness(QuantityT):
     """
     The thickness of the parent element.
@@ -3035,7 +3035,7 @@ class Thickness(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Tip(Point3DT):
     """
     Cone tip position.
@@ -3044,7 +3044,7 @@ class Tip(Point3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class TipRadius(QuantityT):
     """
     Cone base radius.
@@ -3053,7 +3053,7 @@ class TipRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Tonnage(QuantityT):
     """
     She numerical value resulting from the tonnage calculation (see ISO 10303-215,
@@ -3063,7 +3063,7 @@ class Tonnage(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class TorsionConstant(QuantityT):
     """
     The torsional constant is calculated from the cross-section and determines the
@@ -3073,7 +3073,7 @@ class TorsionConstant(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Udirection(Vector3DT):
     """
     Local U direction in a local coordinate system.
@@ -3083,7 +3083,7 @@ class Udirection(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UknotVector(KnotVectorT):
     """The knot-vector in U direction is a list of  size m=+n-1 knots where p is
     the polynomial basis degree and n is the number of control points.
@@ -3096,7 +3096,7 @@ class UknotVector(KnotVectorT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UltimateStress(QuantityT):
     """
     The material ultimate stress.
@@ -3105,7 +3105,7 @@ class UltimateStress(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitCargoT:
     """
     Type definition of dry cargo properties, reference is made to ISO
@@ -3125,7 +3125,7 @@ class UnitCargoT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Unose(QuantityT):
     """
     The bracket nose depth at the local U end of the bracket.
@@ -3134,7 +3134,7 @@ class Unose(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UpperDeckArea(QuantityT):
     """
     Projected area of upper deck forward 0.2 L.
@@ -3143,7 +3143,7 @@ class UpperDeckArea(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UpperRadius(QuantityT):
     """
     The upper radius of an opening or a slot.
@@ -3152,7 +3152,7 @@ class UpperRadius(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UserDefinedParameterT(QuantityT):
     class Meta:
         name = "UserDefinedParameter_T"
@@ -3169,7 +3169,7 @@ class UserDefinedParameterT(QuantityT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Vdirection(Vector3DT):
     """
     Local V direction in a local coordinate system.
@@ -3179,7 +3179,7 @@ class Vdirection(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Vector3D(Vector3DT):
     """
     Unit vector of length 1.
@@ -3188,7 +3188,7 @@ class Vector3D(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class VesselRefT(ReferenceBaseT):
     """
     Type definition.
@@ -3198,7 +3198,7 @@ class VesselRefT(ReferenceBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class VknotVector(KnotVectorT):
     """The knot-vector in V direction is a list of  size m=+n-1 knots where p is
     the polynomial basis degree and n is the number of control points.
@@ -3211,7 +3211,7 @@ class VknotVector(KnotVectorT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Vnose(QuantityT):
     """
     The bracket nose depth at the local V end of the bracket.
@@ -3220,7 +3220,7 @@ class Vnose(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Volume(QuantityT):
     """
     The volume of a compartment or space.
@@ -3229,7 +3229,7 @@ class Volume(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WaterPlaneArea(QuantityT):
     """
     The area of water-plane forward 0.2 L at scantling draught Td.
@@ -3238,7 +3238,7 @@ class WaterPlaneArea(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebCutBackAngle(QuantityT):
     """
     Sniped angle of stiffener web.
@@ -3247,7 +3247,7 @@ class WebCutBackAngle(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebDirection(Vector3DT):
     """
     Direction of the stiffener web.
@@ -3256,7 +3256,7 @@ class WebDirection(Vector3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebNoseHeight(QuantityT):
     """
     Nose height of sniped stiffener web.
@@ -3265,7 +3265,7 @@ class WebNoseHeight(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerRefT(ReferenceBaseT):
     """
     Type definition of WebStiffener connection.
@@ -3287,7 +3287,7 @@ class WebStiffenerRefT(ReferenceBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class WebThickness(QuantityT):
     """
     The thickness of the web.
@@ -3296,7 +3296,7 @@ class WebThickness(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Width(QuantityT):
     """
     The width of the parent element.
@@ -3305,7 +3305,7 @@ class Width(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class X(QuantityT):
     """The X component of a vector or a position.
 
@@ -3315,7 +3315,7 @@ class X(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Y(QuantityT):
     """The Y component of a vector or a position.
 
@@ -3325,7 +3325,7 @@ class Y(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class YieldStress(QuantityT):
     """
     The material yield stress.
@@ -3334,7 +3334,7 @@ class YieldStress(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class YoungsModulus(QuantityT):
     """
     The material elasticity modulus.
@@ -3343,7 +3343,7 @@ class YoungsModulus(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Z(QuantityT):
     """The Z component of a vector or a position.
 
@@ -3353,7 +3353,7 @@ class Z(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ZposDeckline(QuantityT):
     """
     Vertical distance from baseline to deck-line at FE.
@@ -3363,7 +3363,7 @@ class ZposDeckline(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ZposOfDeck(QuantityT):
     """
     Z coordinate of the bulkhead deck.
@@ -3373,7 +3373,7 @@ class ZposOfDeck(QuantityT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class AmountOfSubstance(AmountOfSubstanceType):
     """
     Element containing the dimension of the quantity amount of substance.
@@ -3382,7 +3382,7 @@ class AmountOfSubstance(AmountOfSubstanceType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class ElectricCurrent(ElectricCurrentType):
     """
     Element containing the dimension of the quantity electric current.
@@ -3391,7 +3391,7 @@ class ElectricCurrent(ElectricCurrentType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class EnumeratedRootUnitType:
     """Type for the element for a root unit (from an extensive enumerated list)
     allowing an optional prefix and power.
@@ -3440,7 +3440,7 @@ class EnumeratedRootUnitType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Length(LengthType):
     """
     Element containing the dimension of the quantity length.
@@ -3449,7 +3449,7 @@ class Length(LengthType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class LuminousIntensity(LuminousIntensityType):
     """
     Element containing the dimension of the quantity luminous intensity.
@@ -3458,7 +3458,7 @@ class LuminousIntensity(LuminousIntensityType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class Mass(MassType):
     """
     Element containing the dimension of the quantity mass.
@@ -3467,7 +3467,7 @@ class Mass(MassType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class NameType:
     """Type for name.
 
@@ -3491,7 +3491,7 @@ class NameType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ThermodynamicTemperature(ThermodynamicTemperatureType):
     """
     Element containing the dimension of the quantity thermodynamic temerature.
@@ -3500,7 +3500,7 @@ class ThermodynamicTemperature(ThermodynamicTemperatureType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class Time(TimeType):
     """
     Element containing the dimension of the quantity time.
@@ -3509,7 +3509,7 @@ class Time(TimeType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitSymbol(SymbolType):
     """Element containing various unit symbols.
 
@@ -3519,7 +3519,7 @@ class UnitSymbol(SymbolType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class ApplicationRef(ApplicationRefT):
     """
     The ApplicationRef element is meant to relate the parent element (Product,
@@ -3529,7 +3529,7 @@ class ApplicationRef(ApplicationRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BracketRefT(StructureRefT):
     """
     Type definition.
@@ -3539,7 +3539,7 @@ class BracketRefT(StructureRefT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbFlatT:
     """
     BulbFlat type.
@@ -3626,7 +3626,7 @@ class BulbFlatT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BulkCargoT:
     """
     Type definition of dry cargo properties, reference is made to ISO
@@ -3670,7 +3670,7 @@ class BulkCargoT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CellRef(CellRefT):
     """
     A reference to a Compartment cell.
@@ -3679,7 +3679,7 @@ class CellRef(CellRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CompartmentPropertiesT:
     """
     Type definition of the physical properties of a compartment volume (COG, air
@@ -3741,7 +3741,7 @@ class CompartmentPropertiesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectionConfigurationRef(ConnectionConfigurationRefT):
     """
     A reference to the the a stiffener connection configuration.
@@ -3765,7 +3765,7 @@ class ConnectionConfigurationRef(ConnectionConfigurationRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ContourBoundsT:
     """
     The type definition of the ContourBounds.
@@ -3794,7 +3794,7 @@ class ContourBoundsT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ControlPoint(ControlPointT):
     """
     A NURBS control point composed of a weight and spatial position.
@@ -3803,7 +3803,7 @@ class ControlPoint(ControlPointT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CustomPropertiesT:
     class Meta:
         name = "CustomProperties_T"
@@ -3820,7 +3820,7 @@ class CustomPropertiesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DocumentBaseT:
     """
     Type definition of the abstract base class for the XML document defined in this
@@ -3831,7 +3831,7 @@ class DocumentBaseT:
         schema_version: Current XML schema version (Format - x.y.z) x :
             Incremented for backward incompatible changes ( Ex - Adding
             a required attribute, etc.) y : Major backward compatible
-            changes [ Ex - Adding a new node ,fixing major CRs,etc..] z
+            changes [ Ex - Adding a new node ,fixing major CRs,etc...] z
             : Minor backward compatible changes (Ex - adding an optional
             attribute, etc).
         language: Language used by the application.
@@ -3866,7 +3866,7 @@ class DocumentBaseT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EndCutRef(EndCutRefT):
     """
     A reference to the Stiffener end cut detail.
@@ -3875,7 +3875,7 @@ class EndCutRef(EndCutRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ExternalGeometryRef(ExternalGeometryRefT):
     """
     The ExternalGeometryRef element is used to point to an external geometry
@@ -3885,7 +3885,7 @@ class ExternalGeometryRef(ExternalGeometryRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FeatureCopeT:
     """
     Cope parameters.
@@ -3894,9 +3894,9 @@ class FeatureCopeT:
         cope_radius:
         cope_length: The length of the cope measured along the stiffener
             trace-line (X-axis)  from the end of the stiffener to the
-            center of the cope radius.
+            centre of the cope radius.
         cope_height: The height of the cope measured along the cross
-            section local V-direction from the root point to the center
+            section local V-direction from the root point to the centre
             of the cope radius.
     """
     class Meta:
@@ -3930,7 +3930,7 @@ class FeatureCopeT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeEdgeReinforcementT:
     """
     Attributes
@@ -3963,7 +3963,7 @@ class FlangeEdgeReinforcementT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class FlatBarT:
     """
     Attributes
@@ -3994,7 +3994,7 @@ class FlatBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class GaseousCargoT:
     """
     Type definition of  Liquid cargo physical properties.
@@ -4045,7 +4045,7 @@ class GaseousCargoT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class HalfRoundBarT:
     """
     Attributes
@@ -4078,7 +4078,7 @@ class HalfRoundBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class HexagonBarT:
     """
     Attributes
@@ -4099,7 +4099,7 @@ class HexagonBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleContourRefT(CatalogueRefT):
     """
     Type definition.
@@ -4124,7 +4124,7 @@ class HoleContourRefT(CatalogueRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleRefT(CatalogueRefT):
     """
     Type definition.
@@ -4149,7 +4149,7 @@ class HoleRefT(CatalogueRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class IbarT:
     """
     Attributes
@@ -4200,11 +4200,11 @@ class IbarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class InclinationT:
     """
     Type definition of inclination of stiffener or member along its trace line (web
-    and flange directions)..
+    and flange directions).
     """
     class Meta:
         name = "Inclination_T"
@@ -4238,7 +4238,7 @@ class InclinationT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LbarOfT:
     """
     Attributes
@@ -4299,7 +4299,7 @@ class LbarOfT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LbarOwT:
     """
     Attributes
@@ -4361,7 +4361,7 @@ class LbarOwT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LbarT:
     """
     Attributes
@@ -4412,7 +4412,7 @@ class LbarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LiquidCargoT:
     """
     Type definition of  Liquid cargo physical properties.
@@ -4454,7 +4454,7 @@ class LiquidCargoT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LugPlaterRefT(StructureRefT):
     """
     Type definition.
@@ -4464,7 +4464,7 @@ class LugPlaterRefT(StructureRefT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MaterialRefT(CatalogueRefT):
     """
     Type definition.
@@ -4489,7 +4489,7 @@ class MaterialRefT(CatalogueRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Nurbsproperties(NurbspropertiesT):
     """
     Properties of the basis functions in surface V direction.
@@ -4499,7 +4499,7 @@ class Nurbsproperties(NurbspropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OctagonBarT:
     """
     Attributes
@@ -4521,7 +4521,7 @@ class OctagonBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PhysicalPropertiesT:
     """
     Type definition of physical properties of structure objects (weight and centre
@@ -4551,7 +4551,7 @@ class PhysicalPropertiesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PillarRefT(StructureRefT):
     """
     Type definition.
@@ -4561,7 +4561,7 @@ class PillarRefT(StructureRefT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateMaterialRefT(CatalogueRefT):
     """
     Type definition.
@@ -4596,7 +4596,7 @@ class PlateMaterialRefT(CatalogueRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateRefT(StructureRefT):
     """
     Type definition.
@@ -4606,7 +4606,7 @@ class PlateRefT(StructureRefT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PositionsT:
     class Meta:
         name = "Positions_T"
@@ -4624,7 +4624,7 @@ class PositionsT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PrincipalParticularsT:
     """
     Type definition of the  main vessel particulars required by the Society.
@@ -4656,14 +4656,13 @@ class PrincipalParticularsT:
             50000 tonnes (boolean).
         has_bilge_keel: Whether the vessel has a bilge keel or not.
         freeboard_type: Enumerated free-board types according to the
-            Rules. Type 'A' ship is one which:— is designed to carry
-            only liquid cargoes in bulk— has a high integrity of the
-            exposed deck with only small access openings to cargo
-            compartments, closed by watertight gasket covers of steel or
-            equivalent material— has low permeability of loaded cargo
-            compartments. All ships which are not Type 'A' ships shall
-            be considered as Type 'B' ships.
-            .
+            Rules. Type A ship is one which:— is designed to carry only
+            liquid cargoes in bulk has a high integrity of the exposed
+            deck with only small access openings to cargo compartments,
+            closed by watertight gasket covers of steel or equivalent
+            material has low permeability of loaded cargo compartments.
+            All ships which are not Type A ships shall be considered as
+            Type B ships.                                         .
         number_of_decks_above: Number of decks above 0.7 D from
             baseline.
     """
@@ -4887,7 +4886,7 @@ class PrincipalParticularsT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularTube(RectangularTubeT):
     """
     Rectangular tube.
@@ -4896,7 +4895,7 @@ class RectangularTube(RectangularTubeT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RoundBarT:
     """
     Attributes
@@ -4917,7 +4916,7 @@ class RoundBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionPropertiesT:
     """
     Generic bar section properties.
@@ -4989,7 +4988,7 @@ class SectionPropertiesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionRefT(CatalogueRefT):
     """
     Type definition.
@@ -5034,7 +5033,7 @@ class SectionRefT(CatalogueRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SquareBarT:
     """
     Attributes
@@ -5055,7 +5054,7 @@ class SquareBarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SweepT:
     """
     Type definition of a sweep extent defined by a direction and length.
@@ -5089,7 +5088,7 @@ class SweepT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TbarT:
     """
     Attributes
@@ -5140,7 +5139,7 @@ class TbarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TonnageDataT:
     """
     The information pertinent to the tonnage of the ship.
@@ -5169,7 +5168,7 @@ class TonnageDataT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TransformationT:
     """
     Type definition for a Local (Orthogonal) Axis System.
@@ -5207,7 +5206,7 @@ class TransformationT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TubeT:
     """
     Attributes
@@ -5238,7 +5237,7 @@ class TubeT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UbarT:
     """
     Attributes
@@ -5289,7 +5288,7 @@ class UbarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UNurbsproperties(NurbspropertiesT):
     """
     Properties of the basis functions in surface U direction.
@@ -5299,7 +5298,7 @@ class UNurbsproperties(NurbspropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitCargo(UnitCargoT):
     """The UnitCargo type is intended for spaces carrying a type of dry cargo that
     that is packed or comprises discrete units that can be loaded and stored
@@ -5311,7 +5310,7 @@ class UnitCargo(UnitCargoT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UserDefinedParameter(UserDefinedParameterT):
     """
     A user-defined parameter which can be provided to define a user-defined
@@ -5321,7 +5320,7 @@ class UserDefinedParameter(UserDefinedParameterT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class VNurbsproperties(NurbspropertiesT):
     """
     Properties of the basis functions in surface V direction.
@@ -5331,7 +5330,7 @@ class VNurbsproperties(NurbspropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class VesselRef(VesselRefT):
     """
     A reference to the the Vessel.
@@ -5355,7 +5354,7 @@ class VesselRef(VesselRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerRef(WebStiffenerRefT):
     """
     Web stiffener connection.
@@ -5364,7 +5363,7 @@ class WebStiffenerRef(WebStiffenerRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ZbarT:
     """
     Attributes
@@ -5415,7 +5414,7 @@ class ZbarT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DimensionType:
     """
     Type for dimension.
@@ -5514,7 +5513,7 @@ class DimensionType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EnumeratedRootUnit(EnumeratedRootUnitType):
     """Element for a root unit (from an extensive enumerated list) allowing an
     optional prefix and power.
@@ -5525,7 +5524,7 @@ class EnumeratedRootUnit(EnumeratedRootUnitType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitName(NameType):
     """
     Element containing the unit name.
@@ -5534,7 +5533,7 @@ class UnitName(NameType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class BracketRef(BracketRefT):
     """
     A  reference to a Bracket instance.
@@ -5557,7 +5556,7 @@ class BracketRef(BracketRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BulbFlat(BulbFlatT):
     """
     Bulb bar, rolled or welded.
@@ -5566,7 +5565,7 @@ class BulbFlat(BulbFlatT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BulkCargo(BulkCargoT):
     """A bulk cargo is a type of dry cargo that is solid cargo that is not packed,
     but is carried loose.
@@ -5577,7 +5576,7 @@ class BulkCargo(BulkCargoT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CellConnectionT:
     """
     Type definition for connecting cells to a compartment.
@@ -5601,7 +5600,7 @@ class CellConnectionT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CompartmentProperties(CompartmentPropertiesT):
     """
     The physical properties of a compartment volume (COG, air pipe top).
@@ -5610,7 +5609,7 @@ class CompartmentProperties(CompartmentPropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectedBracketRefT(BracketRefT):
     """
     Type definition of a connected bracket part of a ConnectionConfiguration.
@@ -5628,7 +5627,7 @@ class ConnectedBracketRefT(BracketRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ContourBounds(ContourBoundsT):
     """
     The definition of a contour bound.The contour bound defines the contour curve
@@ -5638,7 +5637,7 @@ class ContourBounds(ContourBoundsT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ControlPtListT:
     """
     Type definition.
@@ -5663,7 +5662,7 @@ class ControlPtListT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CustomProperties(CustomPropertiesT):
     """
     Container for custom properties.
@@ -5672,7 +5671,7 @@ class CustomProperties(CustomPropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FeatureCope(FeatureCopeT):
     """
     Parameters of cope features defining additional bracket or stiffener end cut
@@ -5682,7 +5681,7 @@ class FeatureCope(FeatureCopeT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlangeEdgeReinforcement(FlangeEdgeReinforcementT):
     """
     Bracket flange edge reinforcement parameters.
@@ -5691,7 +5690,7 @@ class FlangeEdgeReinforcement(FlangeEdgeReinforcementT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FlatBar(FlatBarT):
     """
     Flat bar, rolled or cut from plate.
@@ -5700,7 +5699,7 @@ class FlatBar(FlatBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class GaseousCargo(GaseousCargoT):
     """Liquid cargo properties, reference is made to ISO 10303-215:2004.
 
@@ -5711,7 +5710,7 @@ class GaseousCargo(GaseousCargoT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HalfRoundBar(HalfRoundBarT):
     """
     Half round bar.
@@ -5720,7 +5719,7 @@ class HalfRoundBar(HalfRoundBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HexagonBar(HexagonBarT):
     """
     A symmetrical hexagon shaped bar.
@@ -5729,7 +5728,7 @@ class HexagonBar(HexagonBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleContourRef(HoleContourRefT):
     """
     A reference to a catalogue 2D hole contour.
@@ -5738,7 +5737,7 @@ class HoleContourRef(HoleContourRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleRef(HoleRefT):
     """
     A reference to a catalogue 2D hole.
@@ -5747,7 +5746,7 @@ class HoleRef(HoleRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Ibar(IbarT):
     """
     I-section bar, rolled or welded.
@@ -5757,7 +5756,7 @@ class Ibar(IbarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Inclination(InclinationT):
     """The inclination of the cross-section of a stiffener or a pillar along its
     trace line.
@@ -5772,7 +5771,7 @@ class Inclination(InclinationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Lbar(LbarT):
     """
     An angle bar, rolled or welded.
@@ -5782,7 +5781,7 @@ class Lbar(LbarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LbarOf(LbarOfT):
     """
     Welded angle bar where the flange has an overshoot beyond the web.
@@ -5792,7 +5791,7 @@ class LbarOf(LbarOfT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LbarOw(LbarOwT):
     """
     Welded angle bar where the web has an overshoot above the flange.
@@ -5802,7 +5801,7 @@ class LbarOw(LbarOwT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LiquidCargo(LiquidCargoT):
     """Liquid cargo properties, reference is made to ISO 10303-215:2004.
 
@@ -5813,7 +5812,7 @@ class LiquidCargo(LiquidCargoT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LocalCartesian(TransformationT):
     """To specify a Local (Orthogonal) Axis System Origin and two of the local
     X,Y,Z axis need to be specified.
@@ -5826,7 +5825,7 @@ class LocalCartesian(TransformationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LugPlateRef(LugPlaterRefT):
     """
     The reference to plate lugs with additional lug parameters.
@@ -5869,7 +5868,7 @@ class LugPlateRef(LugPlaterRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class MaterialRef(MaterialRefT):
     """
     A reference to a material in the catalogue.
@@ -5878,7 +5877,7 @@ class MaterialRef(MaterialRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OctagonBar(OctagonBarT):
     """
     An octagon shaped bar.
@@ -5887,9 +5886,9 @@ class OctagonBar(OctagonBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PhysicalProperties(PhysicalPropertiesT):
-    """Basic physical properties of structure objects (weight and center of
+    """Basic physical properties of structure objects (weight and centre of
     gravity).
 
     These properties are provided by the exporting application and can
@@ -5900,7 +5899,7 @@ class PhysicalProperties(PhysicalPropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PillarRef(PillarRefT):
     """
     The reference to a connected Member (Pillar).
@@ -5924,7 +5923,7 @@ class PillarRef(PillarRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateMaterial(PlateMaterialRefT):
     """
     Definition of the Plate material and plate thickness.
@@ -5933,7 +5932,7 @@ class PlateMaterial(PlateMaterialRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateRef(PlateRefT):
     """
     The reference to a connected Plate.
@@ -5957,7 +5956,7 @@ class PlateRef(PlateRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Positions(PositionsT):
     """
     3 3D-Points defining the circum circle.
@@ -5966,7 +5965,7 @@ class Positions(PositionsT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PrincipalParticulars(PrincipalParticularsT):
     """
     Main vessel particulars required by the Society.
@@ -5975,7 +5974,7 @@ class PrincipalParticulars(PrincipalParticularsT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RoundBar(RoundBarT):
     """
     Round bar.
@@ -5984,7 +5983,7 @@ class RoundBar(RoundBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionProperties(SectionPropertiesT):
     """
     Generic bar section properties.
@@ -5993,16 +5992,16 @@ class SectionProperties(SectionPropertiesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionRef(SectionRefT):
     """
-    A reference to the parent's cross-section.
+    A reference to the parents cross-section.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SquareBar(SquareBarT):
     """
     Square bar.
@@ -6011,7 +6010,7 @@ class SquareBar(SquareBarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Sweep(SweepT):
     """
     Definition of the sweep extent  by a direction and sweep  length.
@@ -6020,7 +6019,7 @@ class Sweep(SweepT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Tbar(TbarT):
     """
     T-section bar, rolled or welded.
@@ -6030,7 +6029,7 @@ class Tbar(TbarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class TonnageData(TonnageDataT):
     """
     The Vessel tonnage information.
@@ -6039,7 +6038,7 @@ class TonnageData(TonnageDataT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Transformation(TransformationT):
     """A concept specifying a local (orthogonal) axis system.
 
@@ -6052,7 +6051,7 @@ class Transformation(TransformationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Tube(TubeT):
     """
     Circular tube.
@@ -6061,7 +6060,7 @@ class Tube(TubeT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Ubar(UbarT):
     """
     U-section bar, rolled or welded.
@@ -6071,7 +6070,7 @@ class Ubar(UbarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerT:
     """
     Type definition of Web stiffener with single bracket connection.
@@ -6091,7 +6090,7 @@ class WebStiffenerT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Zbar(ZbarT):
     """
     Z-section bar, rolled or welded.
@@ -6101,7 +6100,7 @@ class Zbar(ZbarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Dimension(DimensionType):
     """
     Element to express the dimension of a unit or quantity in terms of the SI base
@@ -6112,7 +6111,7 @@ class Dimension(DimensionType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class RootUnitsType:
     """Type for the container for defining derived units in terms of their root
     units.
@@ -6139,7 +6138,7 @@ class RootUnitsType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BoundedRefT(ReferenceBaseT):
     """
     Type description.
@@ -6158,7 +6157,7 @@ class BoundedRefT(ReferenceBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BracketParametersT:
     """
     Type definition of Common parameters defining bracket configurations used in
@@ -6294,7 +6293,7 @@ class BracketParametersT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CellConnection(CellConnectionT):
     """
     Cross flow connection between two cells.
@@ -6303,7 +6302,7 @@ class CellConnection(CellConnectionT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassDataT:
     """
     Type definition of the main vessel data including Class Notation required by
@@ -6320,12 +6319,12 @@ class ClassDataT:
             to a ship, typically the design ID.
         newbuilding_society_name: The common name of the class society
             relevant for operating the ship. Needs only to be specified
-            when @newbuildingSociety = 'OTHER'
+            when @newbuildingSociety = OTHER
             .
         society:
         society_name: The common name of the class society relevant for
             operating the ship. Needs only to be specified when @society
-            = 'OTHER'                          .
+            = OTHER                            .
     """
     class Meta:
         name = "ClassData_T"
@@ -6387,7 +6386,7 @@ class ClassDataT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectedBracketRef(ConnectedBracketRefT):
     """
     The reference to a connected bracket part of a ConnectionConfiguration.
@@ -6396,7 +6395,7 @@ class ConnectedBracketRef(ConnectedBracketRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ControlPtList(ControlPtListT):
     """List of control points (X,Y,Z) and their optional weights.
 
@@ -6407,7 +6406,7 @@ class ControlPtList(ControlPtListT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class IdBaseT:
     """
     Abstract base type for all types which need to carry an ID.
@@ -6442,7 +6441,7 @@ class IdBaseT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SlotParametersT:
     """
     Type definition of the SlotParameters for a slot cut-out typically used in
@@ -6531,7 +6530,7 @@ class SlotParametersT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffener(WebStiffenerT):
     """
     Connection configuration with one web stiffener with a single bracket
@@ -6541,7 +6540,7 @@ class WebStiffener(WebStiffenerT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DimensionSetType:
     """
     Type for the dimension container.
@@ -6566,7 +6565,7 @@ class DimensionSetType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RootUnits(RootUnitsType):
     """Container for defining derived units in terms of their root units.
 
@@ -6578,7 +6577,7 @@ class RootUnits(RootUnitsType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class BracketParameters(BracketParametersT):
     """
     Bracket parameters necessary for the verification by the society.
@@ -6587,7 +6586,7 @@ class BracketParameters(BracketParametersT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CellBoundaryT(BoundedRefT):
     """
     Attributes
@@ -6610,7 +6609,7 @@ class CellBoundaryT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassificationData(ClassDataT):
     """
     Information that specifies design and intended performance characteristics of
@@ -6621,11 +6620,11 @@ class ClassificationData(ClassDataT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CrossFlow(IdBaseT):
     """Concept to specify cross flow between Cells making up a Compartment.
 
-    This enables the modeling of cells that are not adjacent but are
+    This enables the modelling of cells that are not adjacent but are
     connected by a piping system and part of the same Compartment.
     """
     class Meta:
@@ -6641,7 +6640,7 @@ class CrossFlow(IdBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DescriptionBaseT(IdBaseT):
     """
     Abstract base element for all elements that needs to carry a description.
@@ -6670,7 +6669,7 @@ class DescriptionBaseT(IdBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DoubleBracketT:
     """
     Type definition of DoubleBracket connection.
@@ -6696,7 +6695,7 @@ class DoubleBracketT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeCurveRefT(BoundedRefT):
     """
     Type definition.
@@ -6721,7 +6720,7 @@ class EdgeCurveRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeReinforcementRefT(BoundedRefT):
     """
     Type definition.
@@ -6746,7 +6745,7 @@ class EdgeReinforcementRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class GridRefT(BoundedRefT):
     """
     Type definition.
@@ -6780,7 +6779,7 @@ class GridRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class NamedEntityT(IdBaseT):
     """
     Abstract base element for all elements that needs to carry a mandatory name.
@@ -6810,7 +6809,7 @@ class NamedEntityT(IdBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PanelRefT(BoundedRefT):
     """
     Type definition.
@@ -6835,7 +6834,7 @@ class PanelRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SeamRefT(BoundedRefT):
     """
     Type definition.
@@ -6860,7 +6859,7 @@ class SeamRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SingleBracketT:
     """
     Type definition of DoubleBracket connection.
@@ -6880,7 +6879,7 @@ class SingleBracketT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SlotParameters(SlotParametersT):
     """
     Parameters of a slot (cut-out) typically used in shipbuilding.
@@ -6889,7 +6888,7 @@ class SlotParameters(SlotParametersT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StiffenerRefT(BoundedRefT):
     """
     Type definition.
@@ -6914,7 +6913,7 @@ class StiffenerRefT(BoundedRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SurfaceRefT(BoundedRefT):
     """
     Type definition.
@@ -6924,7 +6923,7 @@ class SurfaceRefT(BoundedRefT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerWithDoubleBracketT:
     """
     Type definition of Web stiffener with double bracket connection.
@@ -6959,7 +6958,7 @@ class WebStiffenerWithDoubleBracketT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerWithSingleBracketT:
     """
     Type definition of Web stiffener with single bracket connection.
@@ -6988,7 +6987,7 @@ class WebStiffenerWithSingleBracketT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DimensionSet(DimensionSetType):
     """
     Container for dimensions.
@@ -6997,7 +6996,7 @@ class DimensionSet(DimensionSetType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitType:
     """
     Type for the unit.
@@ -7059,7 +7058,7 @@ class UnitType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CellBoundary(CellBoundaryT):
     """
     The reference to a Panel surface making up one Cell boundary.
@@ -7068,7 +7067,7 @@ class CellBoundary(CellBoundaryT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DoubleBracket(DoubleBracketT):
     """A double bracket type connection.
 
@@ -7080,7 +7079,7 @@ class DoubleBracket(DoubleBracketT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeCurveRef(EdgeCurveRefT):
     """A reference to a Panel, Plate or bracket boundary curve.
 
@@ -7091,7 +7090,7 @@ class EdgeCurveRef(EdgeCurveRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeReinforcementRef(EdgeReinforcementRefT):
     """
     A  reference to an EdgeReinforcement.
@@ -7100,7 +7099,7 @@ class EdgeReinforcementRef(EdgeReinforcementRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EndCutT(DescriptionBaseT):
     """
     Type definition of stiffener end cut parameters.
@@ -7184,7 +7183,7 @@ class EndCutT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EntityBaseT(DescriptionBaseT):
     """
     Abstract base for all structural parts (Panel, Plate, Seam ...)information are
@@ -7211,7 +7210,7 @@ class EntityBaseT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class GeometryRepresentationT(DescriptionBaseT):
     """
     Type definition of the abstract base class for all structural geometry
@@ -7233,7 +7232,7 @@ class GeometryRepresentationT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class GridRef(GridRefT):
     """An element that makes a reference to a grid definition.
 
@@ -7243,7 +7242,7 @@ class GridRef(GridRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MaterialT(NamedEntityT):
     """
     Type definition of a Material with physical properties.
@@ -7325,7 +7324,7 @@ class MaterialT(NamedEntityT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PanelRef(PanelRefT):
     """
     The reference to a connected Plate.
@@ -7334,7 +7333,7 @@ class PanelRef(PanelRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ParametricHole2DT(DescriptionBaseT):
     """
     Type definition of a set of parametric hole definitions.
@@ -7344,7 +7343,7 @@ class ParametricHole2DT(DescriptionBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PenetratingObjectT:
     """
     Type definition of a penetrated structural object.
@@ -7377,7 +7376,7 @@ class PenetratingObjectT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ProcessLayerT(DescriptionBaseT):
     """
     Type definition for the ProcessLayer.
@@ -7387,7 +7386,7 @@ class ProcessLayerT(DescriptionBaseT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SeamRef(SeamRefT):
     """
     The reference to a connected Plate.
@@ -7396,7 +7395,7 @@ class SeamRef(SeamRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SingleBracket(SingleBracketT):
     """
     Double bracket connection.
@@ -7405,7 +7404,7 @@ class SingleBracket(SingleBracketT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StiffenerRef(StiffenerRefT):
     """
     A  reference to a Stiffener.
@@ -7414,7 +7413,7 @@ class StiffenerRef(StiffenerRefT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SurfaceRef(SurfaceRefT):
     """
     The reference to a Surface geometry which is shared between more than one part.
@@ -7438,7 +7437,7 @@ class SurfaceRef(SurfaceRefT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerWithDoubleBracket(WebStiffenerWithDoubleBracketT):
     """
     Web stiffener with double bracket connection.
@@ -7447,7 +7446,7 @@ class WebStiffenerWithDoubleBracket(WebStiffenerWithDoubleBracketT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class WebStiffenerWithSingleBracket(WebStiffenerWithSingleBracketT):
     """
     Connection configuration with one web stiffener with a single bracket
@@ -7457,7 +7456,7 @@ class WebStiffenerWithSingleBracket(WebStiffenerWithSingleBracketT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Unit(UnitType):
     """Element for describing units.
 
@@ -7468,7 +7467,7 @@ class Unit(UnitType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class CellT(GeometryRepresentationT):
     """
     Type definition of the structural concept of a cell defining a part of a
@@ -7489,7 +7488,7 @@ class CellT(GeometryRepresentationT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectionConfigurationT(DescriptionBaseT):
     """
     Type definition of the structural concept defining  end configurations for
@@ -7594,7 +7593,7 @@ class ConnectionConfigurationT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Curve3DT(GeometryRepresentationT):
     """
     Type definition of the abstract base class for any 3D curve.
@@ -7625,7 +7624,7 @@ class Curve3DT(GeometryRepresentationT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EndCutEnd1(EndCutT):
     """
     The stiffener end cut detailing.
@@ -7634,7 +7633,7 @@ class EndCutEnd1(EndCutT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EndCutEnd2(EndCutT):
     """
     Stiffener end cut detailing at end 2.
@@ -7643,7 +7642,7 @@ class EndCutEnd2(EndCutT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EquipmentT(EntityBaseT):
     """
     Type definition of the Equipment element.
@@ -7662,7 +7661,7 @@ class EquipmentT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class FormT(EntityBaseT):
     """
     Abstract base type  definition of the Form element.
@@ -7691,7 +7690,7 @@ class FormT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Hole2DcontourT(GeometryRepresentationT):
     """
     Type definition of Parametric or curve based 2D contours.
@@ -7720,7 +7719,7 @@ class Hole2DcontourT(GeometryRepresentationT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Material(MaterialT):
     """
     Physical properties of a material.
@@ -7729,7 +7728,7 @@ class Material(MaterialT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OccurrenceT(IdBaseT):
     """
     Type Definition.
@@ -7742,6 +7741,7 @@ class OccurrenceT(IdBaseT):
         stiffener_ref:
         seam_ref:
         hole_ref:
+        edge_reinforcement_ref:
         name: The name of the node
         type_value: The design/product  view type
     """
@@ -7805,6 +7805,14 @@ class OccurrenceT(IdBaseT):
             "namespace": "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd",
         }
     )
+    edge_reinforcement_ref: List[EdgeReinforcementRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "EdgeReinforcementRef",
+            "type": "Element",
+            "namespace": "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd",
+        }
+    )
     name: Optional[str] = field(
         default=None,
         metadata={
@@ -7821,7 +7829,7 @@ class OccurrenceT(IdBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ParametricCircleT(ParametricHole2DT):
     """
     Type definition of the  parametric circle in u-v space defined by a diameter.
@@ -7841,7 +7849,7 @@ class ParametricCircleT(ParametricHole2DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RadialCylinderT(EntityBaseT):
     """
     Cylindrical reference system.
@@ -7861,7 +7869,7 @@ class RadialCylinderT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularHoleT(ParametricHole2DT):
     """
     Type definition of  a rectangular hole with corner fillet radii.
@@ -7905,7 +7913,7 @@ class RectangularHoleT(ParametricHole2DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularMickeyMouseEarsT(ParametricHole2DT):
     """
     A hole where the two circular parts have unequal radii.
@@ -7957,7 +7965,7 @@ class RectangularMickeyMouseEarsT(ParametricHole2DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RefPlaneT(EntityBaseT):
     """
     Type definition of a reference plane used to define unbounded planar geometry.
@@ -7981,7 +7989,7 @@ class RefPlaneT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class StructurePartT(EntityBaseT):
     """
     Type definition of  the abstract base class for structure objects representing
@@ -8010,7 +8018,7 @@ class StructurePartT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SuperEllipticalT(ParametricHole2DT):
     """Type definition of a super-elliptical hole.
 
@@ -8019,7 +8027,7 @@ class SuperEllipticalT(ParametricHole2DT):
     Attributes
         height:
         width:
-        exponent: The exponent of the "super ellipse" equation
+        exponent: The exponent of the super ellipse equation
             (x/Height)**e + (y/Width)**e = 1. If e=2.5 the result is a
             super ellipse while e=2.0 results in a normal ellipse.
     """
@@ -8054,7 +8062,7 @@ class SuperEllipticalT(ParametricHole2DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SymmetricalHoleT(ParametricHole2DT):
     """
     Type definition of a hole made of two semicircles connected by two straight
@@ -8088,7 +8096,7 @@ class SymmetricalHoleT(ParametricHole2DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitSetType:
     """
     Type for the unit container.
@@ -8111,7 +8119,7 @@ class UnitSetType:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Cell(CellT):
     """
     Structural concept of a cell defining a closed volume which is part of a
@@ -8121,14 +8129,14 @@ class Cell(CellT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Circle3DT(Curve3DT):
     """
     Type definition of a circle in 3D space.
 
     Attributes
         diameter: The circle diameter.
-        center: The center of the circle.
+        center: The centre of the circle.
         normal: The normal vector of the    the circle plane.
     """
     class Meta:
@@ -8164,7 +8172,7 @@ class Circle3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CircumArc3DT(Curve3DT):
     """
     Type definition of a 3D Line/Arc representation defined by three points in 3D
@@ -8203,7 +8211,7 @@ class CircumArc3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CircumCircle3DT(Curve3DT):
     """
     Type definition of a circle in 3D space defined by a circumscribed position of
@@ -8224,7 +8232,7 @@ class CircumCircle3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ConnectionConfiguration(ConnectionConfigurationT):
     """
     The structural concept defining the end configurations for stiffeners used in
@@ -8234,13 +8242,13 @@ class ConnectionConfiguration(ConnectionConfigurationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Ellipse3DT(Curve3DT):
     """
     Type definition of An ellipse in 3D space.
 
     Attributes
-        center: The center of the ellipse.
+        center: The centre of the ellipse.
         major_diameter:
         minor_diameter:
         major_axis:
@@ -8306,7 +8314,7 @@ class Ellipse3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Equipment(EquipmentT):
     """
     Place holder for future equipment support (To be designed).
@@ -8315,7 +8323,7 @@ class Equipment(EquipmentT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Hole2Dcontour(Hole2DcontourT):
     """
     An instantiated hole defined by a reference to a hole-shape and a
@@ -8326,7 +8334,7 @@ class Hole2Dcontour(Hole2DcontourT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Line3DT(Curve3DT):
     """
     Type definition of a straight line defined by two points.
@@ -8355,7 +8363,7 @@ class Line3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class MaterialCatalogueT(DescriptionBaseT):
     """
     Type definition of the material types used and their properties recognised by
@@ -8376,7 +8384,7 @@ class MaterialCatalogueT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class MemberT(StructurePartT):
     """
     Abstract type definition for the Member element.
@@ -8386,7 +8394,7 @@ class MemberT(StructurePartT):
         target_namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Nurbs3DT(Curve3DT):
     """
     Type definition of a Non-uniform rational basis spline (NURBS) curve defined by
@@ -8425,7 +8433,7 @@ class Nurbs3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Occurrence(OccurrenceT):
     """
     An occurrence in a DesignView is a reference to a physical part in the model.
@@ -8434,7 +8442,7 @@ class Occurrence(OccurrenceT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ParametricCircle(ParametricCircleT):
     """
     A parametric circle in u-v space defined by a diameter.
@@ -8443,7 +8451,7 @@ class ParametricCircle(ParametricCircleT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PenetrationT(ConnectionConfigurationT):
     """
     Type definition of Structural concept of stiffener penetration configurations
@@ -8474,7 +8482,7 @@ class PenetrationT(ConnectionConfigurationT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PolyLine3DT(Curve3DT):
     """
     Type definition of a 3D curve defined by a list of 3D points composing a list
@@ -8507,7 +8515,7 @@ class PolyLine3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class RadialCylinder(RadialCylinderT):
     """
     Cylindrical reference system.
@@ -8516,7 +8524,7 @@ class RadialCylinder(RadialCylinderT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularHole(RectangularHoleT):
     """
     A rectangular hole in u-v space with corner fillets of equal radii.
@@ -8525,7 +8533,7 @@ class RectangularHole(RectangularHoleT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RectangularMickeyMouseEars(RectangularMickeyMouseEarsT):
     """
     A rectangular hole with corner radii in the form of Mickey Mouse ears.
@@ -8534,7 +8542,7 @@ class RectangularMickeyMouseEars(RectangularMickeyMouseEarsT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RefPlane(RefPlaneT):
     """
     A reference plane used to define unbounded planar geometry.
@@ -8543,7 +8551,7 @@ class RefPlane(RefPlaneT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SlotContour(Hole2DcontourT):
     """
     An optional contour for the detailed slot shape given as a reference to a
@@ -8553,7 +8561,7 @@ class SlotContour(Hole2DcontourT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SuperElliptical(SuperEllipticalT):
     """A super-elliptical hole.
 
@@ -8563,7 +8571,7 @@ class SuperElliptical(SuperEllipticalT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SymmetricalHole(SymmetricalHoleT):
     """
     A hole made of two semicircles connected by two straight lines.
@@ -8572,7 +8580,7 @@ class SymmetricalHole(SymmetricalHoleT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitSet(UnitSetType):
     """Container for units.
 
@@ -8582,7 +8590,7 @@ class UnitSet(UnitSetType):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class Circle3D(Circle3DT):
     """
     A circle in 3D space.
@@ -8591,7 +8599,7 @@ class Circle3D(Circle3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CircumArc3D(CircumArc3DT):
     """3D Line/Arc representation.
 
@@ -8603,7 +8611,7 @@ class CircumArc3D(CircumArc3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CircumCircle3D(CircumCircle3DT):
     """
     Definition of a circle in 3D space by a circum-circle of 3 points.
@@ -8612,7 +8620,7 @@ class CircumCircle3D(CircumCircle3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CylindricalAxesT:
     """
     Cylindrical reference system.
@@ -8632,7 +8640,7 @@ class CylindricalAxesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Ellipse3D(Ellipse3DT):
     """
     An ellipse in 3D space.
@@ -8641,7 +8649,7 @@ class Ellipse3D(Ellipse3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class EquipmentsT(EntityBaseT):
     """
     Type definition.
@@ -8661,7 +8669,7 @@ class EquipmentsT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Line3D(Line3DT):
     """
     A straight line defined by two points.
@@ -8670,7 +8678,7 @@ class Line3D(Line3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class MaterialCatalogue(MaterialCatalogueT):
     """
     The material types used and their properties recognised by the Society.
@@ -8679,7 +8687,7 @@ class MaterialCatalogue(MaterialCatalogueT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Nurbs3D(Nurbs3DT):
     """
     Non-Uniform Rational Spline Base curve definition.
@@ -8689,7 +8697,7 @@ class Nurbs3D(Nurbs3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OccurrenceGroupT(IdBaseT):
     """
     Type definition.
@@ -8736,7 +8744,7 @@ class OccurrenceGroupT(IdBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Penetration(PenetrationT):
     """
     Structural concept of stiffener penetration configurations typically used in
@@ -8746,7 +8754,7 @@ class Penetration(PenetrationT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PhysicalSpaceT(EntityBaseT):
     """
     Type definition of the  concept of a physical compartment representing a closed
@@ -8756,9 +8764,9 @@ class PhysicalSpaceT(EntityBaseT):
         compartment_properties:
         cell:
         cross_flow: Specify cross flow between Cells making up a
-            Compartment. This enables the modeling of cells that are not
-            adjacent, but are connected by a piping system and part of
-            the same Compartment.
+            Compartment. This enables the modelling of cells that are
+            not adjacent, but are connected by a piping system and part
+            of the same Compartment.
         external_geometry_ref:
         bulk_cargo:
         liquid_cargo:
@@ -8838,7 +8846,7 @@ class PhysicalSpaceT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PolyLine3D(PolyLine3DT):
     """A list of 3D points defining a sequence of linear segments.
 
@@ -8849,7 +8857,7 @@ class PolyLine3D(PolyLine3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class RefPlanesT(ReferencePlaneT):
     """
     Frame table position definition.
@@ -8881,7 +8889,7 @@ class RefPlanesT(ReferencePlaneT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitsMltype:
     """
     ComplexType for the root element of an UnitsML document.
@@ -8908,7 +8916,7 @@ class UnitsMltype:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CompositeCurve3DT(Curve3DT):
     """
     Type definition of a composite curve composed of a collection of Line3D,
@@ -8952,7 +8960,7 @@ class CompositeCurve3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CylindricalAxes(CylindricalAxesT):
     """
     Cylindrical reference system.
@@ -8961,7 +8969,7 @@ class CylindricalAxes(CylindricalAxesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Equipments(EquipmentsT):
     """
     Container for equipments.
@@ -8970,7 +8978,7 @@ class Equipments(EquipmentsT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OccurrenceGroup(OccurrenceGroupT):
     """A grouping of occurrences.
 
@@ -8981,7 +8989,7 @@ class OccurrenceGroup(OccurrenceGroupT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PhysicalSpace(PhysicalSpaceT):
     """
     The concept of a physical compartment representing a closed volume (space)
@@ -8991,7 +8999,7 @@ class PhysicalSpace(PhysicalSpaceT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class XrefPlanes(RefPlanesT):
     """A collection of Y-Z planes used as object limits.
 
@@ -9026,7 +9034,7 @@ class XrefPlanes(RefPlanesT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class YrefPlanes(RefPlanesT):
     """A collection of X-Z planes used as object limits.
 
@@ -9039,7 +9047,7 @@ class YrefPlanes(RefPlanesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ZrefPlanes(RefPlanesT):
     """A collection of X-Y planes used as object limits.
 
@@ -9052,7 +9060,7 @@ class ZrefPlanes(RefPlanesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnitsMl(UnitsMltype):
     """
     Container for UnitsML units, quantities, and prefixes.
@@ -9062,7 +9070,7 @@ class UnitsMl(UnitsMltype):
         namespace = "urn:oasis:names:tc:unitsml:schema:xsd:UnitsMLSchema_lite-0.9.18"
 
 
-@dataclass(slots=True)
+@dataclass
 class CompositeCurve3D(CompositeCurve3DT):
     """The concept of a composite curve composed of a collection of Line3D,
     CircumArc3D and/or NURBS segments.
@@ -9074,7 +9082,7 @@ class CompositeCurve3D(CompositeCurve3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CoordinateSystemT(EntityBaseT):
     """
     Type definition of the vessel coordinate system A right-handed orthogonal
@@ -9135,7 +9143,7 @@ class CoordinateSystemT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class DesignViewT(DescriptionBaseT):
     """
     Type definition.
@@ -9171,7 +9179,7 @@ class DesignViewT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SweepCurve(CompositeCurve3DT):
     """
     The sweep direction and extent is defined by a general 3D sweep curve.
@@ -9180,7 +9188,7 @@ class SweepCurve(CompositeCurve3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BaseCurveT(Curve3DT):
     class Meta:
         name = "BaseCurve_T"
@@ -9252,7 +9260,7 @@ class BaseCurveT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Contour3DT:
     """The geometry of a closed contour limiting a surface, represented by a set of
     trim curves or a closed curve primitive.
@@ -9329,7 +9337,7 @@ class Contour3DT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CoordinateSystem(CoordinateSystemT):
     """A right-handed orthogonal Cartesian coordinate system.
 
@@ -9341,7 +9349,7 @@ class CoordinateSystem(CoordinateSystemT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class DesignView(DesignViewT):
     """
     A manifestation of some or all the components in the exporting application that
@@ -9351,7 +9359,7 @@ class DesignView(DesignViewT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FreeEdgeCurve3DT(Curve3DT):
     """
     The type definition of a free edge defined by a collection of non-closed
@@ -9453,7 +9461,7 @@ class FreeEdgeCurve3DT(Curve3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class TraceLineT:
     """
     The type definition of the stiffener TraceLine.
@@ -9473,7 +9481,7 @@ class TraceLineT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BaseCurve(BaseCurveT):
     """
     The base curve defining an extruded surface when it is swept.
@@ -9482,7 +9490,7 @@ class BaseCurve(BaseCurveT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Contour(Contour3DT):
     """
     The contour of a surface or structure part.
@@ -9491,7 +9499,7 @@ class Contour(Contour3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class FaceBoundaryCurve(Contour3DT):
     """
     A collection of 3D curves making up a closed boundary.
@@ -9515,7 +9523,7 @@ class FaceBoundaryCurve(Contour3DT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class FreeEdgeCurve3D(FreeEdgeCurve3DT):
     """
     A single Curve3D or a collection of continuous non-closed Curve3D types which
@@ -9525,7 +9533,7 @@ class FreeEdgeCurve3D(FreeEdgeCurve3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class InnerContour(Contour3DT):
     """
     Any closed contour of an inner opening in a plate.
@@ -9534,7 +9542,7 @@ class InnerContour(Contour3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OuterContour(Contour3DT):
     """
     The geometry of the outer closed contour limiting a surface, represented by a
@@ -9544,7 +9552,7 @@ class OuterContour(Contour3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionInnerShape(Contour3DT):
     """
     Optional arbitrary inner section shape for hollow sections.
@@ -9553,7 +9561,7 @@ class SectionInnerShape(Contour3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SectionOuterShape(Contour3DT):
     """An optional arbitrary contour  representing the outer section shape.
 
@@ -9564,7 +9572,7 @@ class SectionOuterShape(Contour3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class TraceLine(TraceLineT):
     """
     The landing curve on the moulded panel surface represented by any Curve3D type.
@@ -9573,7 +9581,7 @@ class TraceLine(TraceLineT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CutByT:
     """
     Type definition of  a structural concept defining a cut-out in a surface
@@ -9601,7 +9609,7 @@ class CutByT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeReinforcementT(StructurePartT):
     class Meta:
         name = "EdgeReinforcement_T"
@@ -9660,7 +9668,7 @@ class EdgeReinforcementT(StructurePartT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Hole2DT(NamedEntityT):
     """
     Type definition for a 2D hole shape defined either by a choice of a parametric
@@ -9722,7 +9730,7 @@ class Hole2DT(NamedEntityT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class LimitedByT:
     """
     Type definition of the LimitedBy (reference to limiting objects forming a
@@ -9810,7 +9818,7 @@ class LimitedByT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SeamT(EntityBaseT):
     """
     Type definition of the Seam element describing plate seams.
@@ -9829,7 +9837,7 @@ class SeamT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SurfaceT(GeometryRepresentationT):
     """
     Type definition of the  Abstract base class for surface definitions.
@@ -9853,7 +9861,7 @@ class SurfaceT(GeometryRepresentationT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UserDefinedBarSectionT:
     """
     Attributes
@@ -9910,14 +9918,14 @@ class UserDefinedBarSectionT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Cone3DT(SurfaceT):
     """
     Type definition of the Cone surface defined by origin, radius and position of
     the cone tip.
 
     Attributes
-        origin: The origin or center of the cone at the base.
+        origin: The origin or centre of the cone at the base.
         tip:
         base_radius:
         tip_radius: Cone tip radius (default = 0).
@@ -9963,7 +9971,7 @@ class Cone3DT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CutBy(CutByT):
     """
     A structural concept defining a cut-out in a surface defined by a parametric
@@ -9973,7 +9981,7 @@ class CutBy(CutByT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Cylinder3DT(SurfaceT):
     """
     Type definition of the cylindrical surface defined by root point, axis
@@ -10027,7 +10035,7 @@ class Cylinder3DT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class EdgeReinforcement(EdgeReinforcementT):
     """An EdgeReinforcement is used as a faceplate or edge reinforcement for a
     Panel, Plate or Bracket.
@@ -10036,14 +10044,14 @@ class EdgeReinforcement(EdgeReinforcementT):
     bar profile) and is attached to a FreeEdgeCurve which is part of the
     Panel or Plate LimitedBy. The EdgeReinforcement can reference one or
     more limits for the Panel/Plate/Bracket. At the same time the
-    EdgeReinforcement provides it's own TraceLine to determine the
-    actual extent of the reinforcement.
+    EdgeReinforcement provides its own TraceLine to determine the actual
+    extent of the reinforcement.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ExtrudedSurfaceT(SurfaceT):
     """
     Type definition of an extruded surface defined by a base curve and a sweep path
@@ -10080,7 +10088,7 @@ class ExtrudedSurfaceT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Hole2D(Hole2DT):
     """
     A 2D hole shape defined either by a parametric hole or a curve contour.
@@ -10089,7 +10097,7 @@ class Hole2D(Hole2DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class LimitedBy(LimitedByT):
     """The references to limiting objects forming a closed contour of the parent
     element.
@@ -10101,7 +10109,7 @@ class LimitedBy(LimitedByT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class NurbssurfaceT(SurfaceT):
     """
     Type definition of a Non-uniform rational basis surface definition defined by a
@@ -10167,7 +10175,7 @@ class NurbssurfaceT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateCutByT(CutByT):
     """
     Type definition.
@@ -10186,7 +10194,7 @@ class PlateCutByT(CutByT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Seam(SeamT):
     """
     Element describing the structure concept of a plate seam.
@@ -10195,7 +10203,7 @@ class Seam(SeamT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Sphere3DT(SurfaceT):
     """
     Type definition of a Spherical surface defined by origin and radius.
@@ -10224,7 +10232,7 @@ class Sphere3DT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UserDefinedBarSection(UserDefinedBarSectionT):
     """
     User defined or unknown bar type.
@@ -10233,7 +10241,7 @@ class UserDefinedBarSection(UserDefinedBarSectionT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BarSectionT(DescriptionBaseT):
     """
     Type definition of the  catalogue of rolled and welded cross-sections
@@ -10435,7 +10443,7 @@ class BarSectionT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Cone3D(Cone3DT):
     """
     Cone surface defined by origin, radius and position of cone tip.
@@ -10444,7 +10452,7 @@ class Cone3D(Cone3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Cylinder3D(Cylinder3DT):
     """
     Cylindrical surface defined by origin, axis direction, radius and height.
@@ -10453,7 +10461,7 @@ class Cylinder3D(Cylinder3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ExtrudedSurface(ExtrudedSurfaceT):
     """
     An extruded surface defined by a base curve and a sweep path with extent.
@@ -10462,7 +10470,7 @@ class ExtrudedSurface(ExtrudedSurfaceT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleShapeCatalogueT(DescriptionBaseT):
     """
     Type definition of the geometry used to describe the shape of a hole.
@@ -10486,7 +10494,7 @@ class HoleShapeCatalogueT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Nurbssurface(NurbssurfaceT):
     """
     Non-uniform rational basis surface definition defined by a net (grid) of
@@ -10497,7 +10505,7 @@ class Nurbssurface(NurbssurfaceT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class PillarT(MemberT):
     """
     Type definition of the structural concept for pillars used as vertical support
@@ -10597,7 +10605,7 @@ class PillarT(MemberT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Plane3DT(SurfaceT):
     """
     Type definition of a  Planar surface defined by Root Point and Normal.
@@ -10648,7 +10656,7 @@ class Plane3DT(SurfaceT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateCutBy(PlateCutByT):
     """
     A structural concept defining a cut-out in a surface defined by a parametric
@@ -10658,7 +10666,7 @@ class PlateCutBy(PlateCutByT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Sphere3D(Sphere3DT):
     """
     Spherical surface defined by origin and radius.
@@ -10667,7 +10675,7 @@ class Sphere3D(Sphere3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SplitByT:
     """
     Type definition of Structural concepts defining the subdivision of a panel into
@@ -10688,7 +10696,7 @@ class SplitByT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class StiffenerT(StructurePartT):
     """
     Type definition of the Stiffener structure concept.
@@ -10817,7 +10825,7 @@ class StiffenerT(StructurePartT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class BarSection(BarSectionT):
     """
     A catalogue of rolled and welded cross-sections recognised by the Society.
@@ -10826,7 +10834,7 @@ class BarSection(BarSectionT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class HoleShapeCatalogue(HoleShapeCatalogueT):
     """
     Catalogue of 2D hole shapes.
@@ -10835,7 +10843,7 @@ class HoleShapeCatalogue(HoleShapeCatalogueT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Pillar(PillarT):
     """
     Structural concept for pillars used as vertical support in ship building.
@@ -10844,7 +10852,7 @@ class Pillar(PillarT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Plane3D(Plane3DT):
     """
     Planar surface defined by origin and Normal direction.
@@ -10853,7 +10861,7 @@ class Plane3D(Plane3DT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SplitBy(SplitByT):
     """
     Structural concepts defining the subdivision of a panel into plates split by
@@ -10863,7 +10871,7 @@ class SplitBy(SplitByT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Stiffener(StiffenerT):
     """
     Element describing the structure concept of type stiffeners which are attached
@@ -10873,7 +10881,7 @@ class Stiffener(StiffenerT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class StiffenedByT:
     """
     Type definition of the structural concept defining the stiffeners which belongs
@@ -10901,7 +10909,7 @@ class StiffenedByT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class SurfaceCollectionT(DescriptionBaseT):
     class Meta:
         name = "SurfaceCollection_T"
@@ -10967,7 +10975,7 @@ class SurfaceCollectionT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class UnboundedGeometryT:
     """
     Type definition of an unbounded surface geometry of the parent element.
@@ -11042,7 +11050,7 @@ class UnboundedGeometryT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class XsectionCatalogueT(NamedEntityT):
     """
     Type definition of the cross-section types for stiffeners and their properties
@@ -11063,7 +11071,7 @@ class XsectionCatalogueT(NamedEntityT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class StiffenedBy(StiffenedByT):
     """
     Structural concept defining the stiffeners which belongs to a panel.
@@ -11072,7 +11080,7 @@ class StiffenedBy(StiffenedByT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class SurfaceCollection(SurfaceCollectionT):
     """A collection of any number of surfaces.
 
@@ -11084,7 +11092,7 @@ class SurfaceCollection(SurfaceCollectionT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class UnboundedGeometry(UnboundedGeometryT):
     """
     The unbounded surface geometry of the parent element.
@@ -11093,7 +11101,7 @@ class UnboundedGeometry(UnboundedGeometryT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class XsectionCatalogue(XsectionCatalogueT):
     """
     The cross-section types for stiffeners and their properties recognised by the
@@ -11104,7 +11112,7 @@ class XsectionCatalogue(XsectionCatalogueT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class BracketT(StructurePartT):
     """
     Type definition  of Structural concept of brackets used in shipbuilding.
@@ -11198,7 +11206,7 @@ class BracketT(StructurePartT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassCatalogueT(DescriptionBaseT):
     """
     Type definition of the Class catalogues provided as part of the OCX.
@@ -11241,7 +11249,7 @@ class ClassCatalogueT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class CompartmentFaceT(EntityBaseT):
     """
     Type definition of the face of a compartment defined by a surface boundary.
@@ -11275,7 +11283,7 @@ class CompartmentFaceT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PlateT(StructurePartT):
     """
     Type definition of Structural concept of  plates used in shipbuilding.
@@ -11369,7 +11377,7 @@ class PlateT(StructurePartT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ReferenceSurfacesT:
     """
     Type definition of a collection of surfaces.
@@ -11436,7 +11444,7 @@ class ReferenceSurfacesT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Bracket(BracketT):
     """
     Structural concept of brackets used in shipbuilding.
@@ -11445,18 +11453,18 @@ class Bracket(BracketT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ClassCatalogue(ClassCatalogueT):
     """The Class catalogues provided as part of the OCX.
 
-    The catalogue can hold the society's definitions of cross-sections,
+    The catalogue can hold the societys definitions of cross-sections,
     materials, hole shapes etc.
     """
     class Meta:
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CompartmentFace(CompartmentFaceT):
     """
     The face of a compartment defined by a surface boundary.
@@ -11465,7 +11473,7 @@ class CompartmentFace(CompartmentFaceT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Plate(PlateT):
     """
     Structural concept of plates used in shipbuilding.
@@ -11474,7 +11482,7 @@ class Plate(PlateT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ReferenceSurfaces(ReferenceSurfacesT):
     """
     Collection of frequently used surfaces which are referenced by more than one
@@ -11484,7 +11492,7 @@ class ReferenceSurfaces(ReferenceSurfacesT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class CompartmentT(EntityBaseT):
     """
     Type definition of the  concept of a compartment part of the vessel capacity
@@ -11567,7 +11575,7 @@ class CompartmentT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class ComposedOfT:
     class Meta:
         name = "ComposedOf_T"
@@ -11600,7 +11608,7 @@ class ComposedOfT:
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Compartment(CompartmentT):
     """
     The concept of a compartment part of the vessel capacity plan representing a
@@ -11610,7 +11618,7 @@ class Compartment(CompartmentT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ComposedOf(ComposedOfT):
     """
     Element representing the structural concepts which composes a structure Panel.
@@ -11619,7 +11627,7 @@ class ComposedOf(ComposedOfT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class ArrangementT(DescriptionBaseT):
     """
     Type definition of the vessel arrangement (of compartments).
@@ -11652,7 +11660,7 @@ class ArrangementT(DescriptionBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class PanelT(EntityBaseT):
     """Type definition of Structural concept of shipbuilding panels.
 
@@ -11769,7 +11777,7 @@ class PanelT(EntityBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Arrangement(ArrangementT):
     """
     The vessel arrangement or capacity plan defined by its compartments.
@@ -11778,7 +11786,7 @@ class Arrangement(ArrangementT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class Panel(PanelT):
     """Structural concept of shipbuilding panels.
 
@@ -11788,15 +11796,15 @@ class Panel(PanelT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class VesselT(FormT):
     """
     Type definition of the Vessel asset subject to Classification.
 
     Attributes
         coordinate_system: The vessel coordinate system definition. If
-            not present, it is assumed that the Vessel is modeled in the
-            global coordinate frame.
+            not present, it is assumed that the Vessel is modelled in
+            the global coordinate frame.
         classification_data:
         builder_information:
         tonnage_data:
@@ -11806,7 +11814,7 @@ class VesselT(FormT):
         arrangement:
         reference_surfaces: Collection of frequently used surfaces which
             are referenced by more than one object. Will typically
-            contain th outer shell definition.
+            contain the outer shell definition.
         panel:
         plate:
         stiffener:
@@ -11933,7 +11941,7 @@ class VesselT(FormT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class Vessel(VesselT):
     """
     Vessel asset subject to Classification.
@@ -11942,7 +11950,7 @@ class Vessel(VesselT):
         namespace = "https://3docx.org/fileadmin//ocx_schema//V300//OCX_Schema.xsd"
 
 
-@dataclass(slots=True)
+@dataclass
 class OcxXmlT(DocumentBaseT):
     """
     Root type of the schema.
@@ -11995,7 +12003,7 @@ class OcxXmlT(DocumentBaseT):
     )
 
 
-@dataclass(slots=True)
+@dataclass
 class OcxXml(OcxXmlT):
     """
     Root element of the schema.
