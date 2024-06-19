@@ -27,7 +27,7 @@ twine = "*"
 github_url = "https://github.com/OCXStandard/OCX_Schema"
 
 [tool.tbump.version]
-current = "3.0.0"
+current = "3.0.1"
 
 # Example of a semver regexp.
 # Make sure this matches current_version before

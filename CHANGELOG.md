@@ -14,7 +14,7 @@ and this project adheres to the Python [PEP 440 versioning recommendations](http
 * ``Security`` in case of vulnerabilities.
 
 
-## [3.0.1] - 2024.06.19
+## [3.0.1] - 2024.06.20
 Bump to 3.0.1
 
 Release tag: [v3.0.1](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.0.1)
@@ -22,6 +22,7 @@ Release tag: [v3.0.1](https://github.com/OCXStandard/OCX_Schema/releases/tag/v3.
 Schema release version
 
 ### Change
+* [Wrong cardinality on PlateCutBy #148](https://github.com/OCXStandard/OCX_Schema/issues/148)
 
 Committed missing changes in previous commits:
 * [ReferenceBase_T: remove mandatory name attribute #144](https://github.com/OCXStandard/OCX_Schema/issues/144)
